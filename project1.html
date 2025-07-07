@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Solar-Powered Water Purifier</title>
+    <style>
+        /* Reuse the same CSS from your main page */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .project-detail {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .project-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .project-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .project-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .project-tag {
+            background: #e0e0e0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .project-content {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .project-gallery {
+            flex: 1;
+        }
+        
+        .main-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .thumbnail-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            flex: 1;
+        }
+        
+        .project-info h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .project-info h3 {
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+        
+        .project-specs {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .spec-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .spec-label {
+            font-weight: bold;
+            width: 150px;
+        }
+        
+        .video-container {
+            margin: 40px 0;
+        }
+        
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .project-content {
+                flex-direction: column;
+            }
+            
+            .project-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Your<span>Name</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Detail -->
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h1>Solar-Powered Water Purifier</h1>
+                <div class="project-tags">
+                    <span class="project-tag">Sustainability</span>
+                    <span class="project-tag">Renewable Energy</span>
+                    <span class="project-tag">Product Design</span>
+                    <span class="project-tag">CAD</span>
+                </div>
+                <p><strong>Project Date:</strong> January 2022 - June 2022</p>
+            </div>
+            
+            <div class="project-content">
+                <div class="project-gallery">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Solar-Powered Water Purifier" class="main-image">
+                    <div class="thumbnail-container">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thumbnail 1" class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1581093057306-9127adc9a8a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thumbnail 2" class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thumbnail 3" class="thumbnail">
+                    </div>
+                </div>
+                
+                <div class="project-info">
+                    <h2>Project Overview</h2>
+                    <p>A low-cost, portable water purification system designed for rural communities without access to clean water. The system uses solar thermal energy to purify water through distillation, eliminating 99.9% of pathogens and heavy metals.</p>
+                    
+                    <div class="project-specs">
+                        <h3>Technical Specifications</h3>
+                        <div class="spec-item">
+                            <div class="spec-label">Dimensions:</div>
+                            <div class="spec-value">60cm × 45cm × 30cm</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight:</div>
+                            <div class="spec-value">8.5 kg</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Daily Output:</div>
+                            <div class="spec-value">15 liters (sunny conditions)</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Materials:</div>
+                            <div class="spec-value">Stainless steel, tempered glass, food-grade silicone</div>
+                        </div>
+                    </div>
+                    
+                    <h3>My Role</h3>
+                    <p>As the lead designer, I was responsible for the thermal system design, CAD modeling, prototype testing, and field trials. I collaborated with a team of 3 engineers to optimize the design for manufacturability and cost-effectiveness.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Self-cleaning condensation surface</li>
+                        <li>Modular design for easy repair</li>
+                        <li>Integrated solar tracking (manual adjustment)</li>
+                        <li>No electrical components - purely mechanical</li>
+                    </ul>
+                    
+                    <a href="profile.html" class="btn">Back to Projects</a>
+                </div>
+            </div>
+            
+            <div class="video-container">
+                <h2>Project Demonstration</h2>
+                <video controls poster="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                    <source src="water-purifier-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="project-challenges">
+                <h2>Challenges & Solutions</h2>
+                <h3>Challenge: Low Efficiency in Cloudy Conditions</h3>
+                <p>Initial prototypes showed significant drops in output during cloudy weather. We solved this by adding insulated thermal mass (water-filled chambers) that store heat during sunny periods and continue the distillation process when sunlight is reduced.</p>
+                
+                <h3>Challenge: Mineral Buildup</h3>
+                <p>Hard water sources caused scaling that reduced efficiency. The solution was a removable, cleanable collector plate with a non-stick coating that could be easily maintained by end-users.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple image gallery functionality
+        const mainImage = document.querySelector('.main-image');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                mainImage.src = this.src;
+            });
+        });
+        
+        // You would replace this with actual video file path
+        // This is just for demonstration
+        const videoSource = document.querySelector('.video-container source');
+        // In a real implementation, you would set the actual video file path
+        // videoSource.src = 'path-to-your-video-file.mp4';
+    </script>
+</body>
+</html>
