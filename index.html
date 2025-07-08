@@ -430,114 +430,84 @@
             color: var(--primary-color);
         }
         
-        /* Gallery Section */
-        #gallery {
-            background-color: white;
-        }
+/* Gallery Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Gallery Item Container */
+.gallery-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Universal Media Container */
+.gallery-img-container {
+  height: 250px; /* Fixed height for all items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8; /* Neutral background */
+  margin-bottom: 10px;
+  overflow: hidden; /* Hide overflow (optional) */
+}
+
+/* Images - No Cropping */
+.gallery-img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Preserves aspect ratio */
+}
+
+/* Videos - Same Treatment */
+.gallery-img-container video {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
         
-/*         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        } */
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            height: 250px;
-        }
-        
-        .gallery-item img, .gallery-item video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .gallery-item:hover img, .gallery-item:hover video {
-            transform: scale(1.1);
-        }
-        
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s;
-        }
-        
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-        
-        /* Contact Section */
-        #contact {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
-        
-        #contact .section-title {
-            color: white;
-        }
-        
-        #contact .section-title::after {
-            background: white;
-        }
-        
-        .contact-info {
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background: #2980b9;
-        }
+/* Contact Section Styling */
+.contact-method {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: #3498db; /* Blue color */
+    min-width: 30px;
+}
+
+.contact-link {
+    font-size: 1.3rem;
+    color: #2c3e50; /* Dark color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+}
+
+.contact-link:hover {
+    color: #3498db; /* Blue on hover */
+    border-bottom: 2px solid #3498db;
+}
+
+/* Make it even more prominent on mobile */
+@media (max-width: 768px) {
+    .contact-link {
+        font-size: 1.1rem;
+    }
+    .contact-method {
+        margin: 20px 0;
+    }
+}
         
         /* Footer */
         footer {
@@ -583,46 +553,6 @@
         
         .contact-method a:hover {
             color: #3498db; /* Blue on hover */
-        }
-
-        /* Gallery Grid Layout */
-        .gallery-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          gap: 20px;
-        }
-        
-        /* Gallery Item Container */
-        .gallery-item {
-          border: 1px solid #eee;
-          border-radius: 8px;
-          padding: 15px;
-          text-align: center;
-        }
-        
-        /* Universal Media Container */
-        .gallery-img-container {
-          height: 250px; /* Fixed height for all items */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: #f8f8f8; /* Neutral background */
-          margin-bottom: 10px;
-          overflow: hidden; /* Hide overflow (optional) */
-        }
-        
-        /* Images - No Cropping */
-        .gallery-img-container img {
-          max-height: 100%;
-          max-width: 100%;
-          object-fit: contain; /* Preserves aspect ratio */
-        }
-        
-        /* Videos - Same Treatment */
-        .gallery-img-container video {
-          max-height: 100%;
-          max-width: 100%;
-          object-fit: contain;
         }
         
         /* Responsive Styles */
@@ -912,7 +842,7 @@
                         <p>This project aims to enable early detection of diabetic retinopathy by applying deep learning and computer vision techniques to retinal images. Using a ResNet-based convolutional neural network, the system is trained to classify the presence and severity of diabetic retinopathy with high accuracy.</p>
                         <p>By leveraging advanced image processing and transfer learning, this solution helps healthcare providers identify at-risk patients early, improving treatment outcomes and expanding access to reliable diagnostics, particularly in low-resource settings.</p>
 
-                        <a href="project1.html" class="btn">View Details</a>
+                        <a href="#" class="btn">View Details</a>
                     </div>
                 </div>
                 
@@ -1075,7 +1005,7 @@
         <div class="gallery-item">
           <div class="gallery-img-container">
             <video controls poster="project1-thumbnail.jpg">
-              <source src="WhatsApp Video 2025-07-07 at 20.35.48_577dfa03.mp4" type="video/mp4">
+              <source src="WhatsApp Video 2025-07-07 at 20.35.48_7b434c47.mp4" type="video/mp4">
             </video>
           </div>
           <p>Working prototype demo</p>
@@ -1112,28 +1042,30 @@
     </section> -->
 
     <!-- Contact Section -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-info">
-            <p>I'm always interested in hearing about new engineering challenges or collaboration opportunities. Reach out directly:</p>
-            
-            <!-- Email Link -->
-            <div class="contact-method">
-                <i class="fas fa-envelope"></i>
-                <p>ricardocsn01@gmail.com</p>
-                <a href="mailto:ricardocsn01@gmail.com">ricardocsn01@gmail.com</a>
-            </div>
-            
-            <!-- Phone Link -->
-            <div class="contact-method">
-                <i class="fas fa-phone"></i>
-                <p>(876)-469-7042</p>
-                <a href="tel:8764697042">(876) 469-7042</a>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <p>I'm always interested in hearing about new engineering challenges or collaboration opportunities. Reach out directly:</p>
+                
+                <!-- Email Link - Big and Obvious -->
+                <div class="contact-method">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <a href="mailto:ricardocsn01@gmail.com" class="contact-link">
+                        ricardocsn01@gmail.com
+                    </a>
+                </div>
+                
+                <!-- Phone Link - Big and Obvious -->
+                <div class="contact-method">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <a href="tel:8764697042" class="contact-link">
+                        (876) 469-7042
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer>
