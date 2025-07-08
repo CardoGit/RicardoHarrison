@@ -469,6 +469,38 @@
   max-width: 100%;
   object-fit: contain;
 }
+
+        /* Gallery Title Styling */
+.gallery-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #2c3e50; /* Dark blue color */
+}
+
+.gallery-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #3498db; /* Blue accent color */
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Animation on hover */
+.gallery-title:hover::after {
+  width: 120px;
+  transition: width 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2rem;
+  }
+}
         
 /* Contact Section Styling */
 .contact-method {
@@ -975,10 +1007,11 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-      <h2>Project Gallery</h2>
-      <div class="gallery-grid">
+<!-- Gallery Section -->
+<section id="gallery" class="section">  <!-- Added 'section' class -->
+  <div class="container">
+    <h2 class="section-title gallery-title">Project Gallery</h2>  <!-- Added title class -->
+    <div class="gallery-grid">
         <!-- Image Example -->
         <div class="gallery-item">
           <div class="gallery-img-container">
@@ -1005,7 +1038,7 @@
         <div class="gallery-item">
           <div class="gallery-img-container">
             <video controls poster="project1-thumbnail.jpg">
-              <source src="WhatsApp Video 2025-07-07 at 20.35.48_7b434c47.mp4" type="video/mp4">
+              <source src="WhatsApp Video 2025-07-07 at 20.34.27_b059857a.mp4" type="video/mp4">
             </video>
           </div>
           <p>Working prototype demo</p>
