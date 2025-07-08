@@ -430,75 +430,39 @@
             color: var(--primary-color);
         }
         
-/* Gallery Grid Layout */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+/* Gallery Card Styling (matches hobbies) */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
 }
 
-/* Gallery Item Container */
-.gallery-item {
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-}
-
-/* Universal Media Container */
-.gallery-img-container {
-  height: 250px; /* Fixed height for all items */
+.gallery-media-container {
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f8f8f8; /* Neutral background */
-  margin-bottom: 10px;
-  overflow: hidden; /* Hide overflow (optional) */
+  background: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
 }
 
-/* Images - No Cropping */
-.gallery-img-container img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain; /* Preserves aspect ratio */
-}
-
-/* Videos - Same Treatment */
-.gallery-img-container video {
+.gallery-media-container img,
+.gallery-media-container video {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-        /* Gallery Title Styling */
-.gallery-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  position: relative;
-  color: #2c3e50; /* Dark blue color */
-}
-
-.gallery-title::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #3498db; /* Blue accent color */
-  margin: 15px auto 0;
-  border-radius: 2px;
-}
-
-/* Animation on hover */
-.gallery-title:hover::after {
-  width: 120px;
-  transition: width 0.3s ease;
+.gallery-card:hover .gallery-media-container img,
+.gallery-card:hover .gallery-media-container video {
+  transform: scale(1.05);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .gallery-title {
-    font-size: 2rem;
+  .hobbies-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
         
@@ -1008,43 +972,52 @@
     </section>
 
 <!-- Gallery Section -->
-<section id="gallery" class="section">  <!-- Added 'section' class -->
+<section id="gallery" class="section">
   <div class="container">
-    <h2 class="section-title gallery-title">Project Gallery</h2>  <!-- Added title class -->
-    <div class="gallery-grid">
-        <!-- Image Example -->
-        <div class="gallery-item">
-          <div class="gallery-img-container">
-            <img src="WhatsApp Image 2025-04-04 at 09.37.28_dddc9a68.jpg" alt="Solar Panel Prototype">
-          </div>
-          <p>Solar energy testing</p>
+    <h2 class="section-title">Project Gallery</h2>
+    <div class="hobbies-container"> <!-- Reuse hobbies container class -->
+      
+      <!-- Gallery Item 1 -->
+      <div class="hobby-card gallery-card"> <!-- Added gallery-card class -->
+        <div class="gallery-media-container">
+          <img src="WhatsApp Image 2025-04-04 at 09.37.28_dddc9a68.jpg" alt="Project Prototype">
         </div>
-
-        <div class="gallery-item">
-          <div class="gallery-img-container">
-            <img src="WhatsApp Image 2025-06-21 at 09.32.31_7c19a358.jpg" alt="Solar Panel Prototype">
-          </div>
-          <p>Solar energy testing</p>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-img-container">
-            <img src="WhatsApp Image 2025-07-07 at 20.38.20_be91102c.jpg" alt="Solar Panel Prototype">
-          </div>
-          <p>Solar energy testing</p>
-        </div>
-    
-        <!-- Video Example -->
-        <div class="gallery-item">
-          <div class="gallery-img-container">
-            <video controls poster="project1-thumbnail.jpg">
-              <source src="WhatsApp Video 2025-07-07 at 20.34.27_b059857a.mp4" type="video/mp4">
-            </video>
-          </div>
-          <p>Working prototype demo</p>
-        </div>
+        <h3>Diabetic Retinopathy Detection</h3>
+        <p>Computer vision system for early diagnosis</p>
       </div>
-    </section>
+      
+      <!-- Gallery Item 2 -->
+      <div class="hobby-card gallery-card">
+        <div class="gallery-media-container">
+          <img src="WhatsApp Image 2025-06-21 at 09.32.31_7c19a358.jpg" alt="Blood Pressure Monitor">
+        </div>
+        <h3>Vital Signs Monitoring</h3>
+        <p>AI-powered health tracking system</p>
+      </div>
+      
+      <!-- Gallery Item 3 -->
+      <div class="hobby-card gallery-card">
+        <div class="gallery-media-container">
+          <img src="WhatsApp Image 2025-07-07 at 20.38.20_be91102c.jpg" alt="Grip Strength Device">
+        </div>
+        <h3>Grip Strength Monitor</h3>
+        <p>Rehabilitation training tool</p>
+      </div>
+      
+      <!-- Video Item -->
+      <div class="hobby-card gallery-card">
+        <div class="gallery-media-container">
+          <video controls poster="project1-thumbnail.jpg">
+            <source src="WhatsApp Video 2025-07-07 at 20.35.48_577dfa03.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3>Project Demo</h3>
+        <p>Working prototype demonstration</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
     <!-- Contact Section -->
 <!--     <section id="contact" class="section">
         <div class="container">
