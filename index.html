@@ -554,6 +554,29 @@
         .social-links a:hover {
             color: var(--secondary-color);
         }
+
+        .contact-method {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-method i {
+            color: #3498db; /* Blue icon color */
+            font-size: 1.2rem;
+        }
+        
+        .contact-method a {
+            color: #2c3e50; /* Dark text */
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        .contact-method a:hover {
+            color: #3498db; /* Blue on hover */
+        }
         
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -734,15 +757,17 @@
                 </div>
                 <div class="about-text">
                     <h3>Who am I?</h3>
-                    <p>I'm a passionate mechanical engineer with 5 years of experience in product design and development. I specialize in CAD modeling, finite element analysis, and prototyping.</p>
-                    <p>My approach combines technical expertise with creative problem-solving to deliver innovative solutions that meet both functional requirements and user needs.</p>
-                    <p>When I'm not engineering, you can find me hiking, tinkering with my 3D printer, or volunteering with STEM education programs.</p>
+                    <p>I’m a recent Engineering graduate driven by a passion for solving real-world problems through innovative design and practical solutions. With a solid background in 3D modelling, circuit design, prototyping, and enclosure development, I enjoy bringing hardware projects from concept to reality with precision and creativity.</p>
+
+                    <p>Alongside my technical skills, I have experience in AI development and full-stack web development, giving me the versatility to integrate smart technologies into my engineering projects. I’m also dedicated to strong project management and take pride in leading and motivating teams to deliver high-quality, reliable work.</p>
+
+                    <p>Curious, committed, and collaborative, I’m always ready to take the initiative and guide others toward producing solutions that are both effective and inspiring.</p>
                     
                     <div class="skills">
                         <h3>My Skills</h3>
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>CAD Design (SolidWorks, AutoCAD)</span>
+                                <span>CAD Design (Fsion, AutoCAD)</span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
@@ -751,7 +776,7 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>Finite Element Analysis</span>
+                                <span>Project Management</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -769,11 +794,47 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>Project Management</span>
+                                <span>Mobile/Web App design</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Computer Vision</span>
                                 <span>75%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Circut design</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Problem Solving</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Programming</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%;"></div>
                             </div>
                         </div>
                     </div>
@@ -793,13 +854,17 @@
                         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Solar-Powered Water Purifier">
                     </div>
                     <div class="project-content">
-                        <h3>Solar-Powered Water Purifier</h3>
+                        <h3>Diabetic Retinopathy Detection using Computer Vision</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Sustainability</span>
-                            <span class="project-tag">Renewable Energy</span>
-                            <span class="project-tag">Product Design</span>
+                            <span class="project-tag">DeepLearning</span>
+                            <span class="project-tag">RetinalImaging</span>
+                            <span class="project-tag">AIForHealth</span>
+                            <span class="project-tag">ComputerVision</span>
+                            <span class="project-tag">DiabeticRetinopathy</span>
                         </div>
-                        <p>A low-cost, portable water purification system using solar thermal energy for rural communities without access to clean water.</p>
+                        <p>This project aims to enable early detection of diabetic retinopathy by applying deep learning and computer vision techniques to retinal images. Using a ResNet-based convolutional neural network, the system is trained to classify the presence and severity of diabetic retinopathy with high accuracy.</p>
+                        <p>By leveraging advanced image processing and transfer learning, this solution helps healthcare providers identify at-risk patients early, improving treatment outcomes and expanding access to reliable diagnostics, particularly in low-resource settings.</p>
+
                         <a href="project1.html" class="btn">View Details</a>
                     </div>
                 </div>
@@ -810,13 +875,19 @@
                         <img src="https://images.unsplash.com/photo-1581093057306-9127adc9a8a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Automated Assembly Line">
                     </div>
                     <div class="project-content">
-                        <h3>Automated Assembly Line</h3>
+                        <h3>“AI-Based Blood Pressure and Vital Signs Monitoring System</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Automation</span>
-                            <span class="project-tag">Robotics</span>
-                            <span class="project-tag">Manufacturing</span>
+                            <span class="project-tag">NonInvasiveBP</span>
+                            <span class="project-tag">Telemedicine</span>
+                            <span class="project-tag">RemotePatientMonitoring</span>
+                            <span class="project-tag">VitalSigns</span>
+                            <span class="project-tag">PPG</span>
                         </div>
-                        <p>Designed and implemented an automated assembly line that increased production efficiency by 40% while reducing defects by 25%.</p>
+                        <p>This project is a non-invasive, AI-powered system designed to estimate blood pressure and monitor key vital signs in real time. Using a MAX30102 optical sensor, the system collects IR and RED PPG signals to extract features such as standard deviation, delta, pulse amplitude, heart rate variability, and heart rate. These features are processed by a trained machine learning model, achieving blood pressure estimation within ±4 mmHg accuracy.</p>
+
+                        <p>In addition to blood pressure, the system measures heart rate, SpO₂, and body temperature. A custom mobile app displays the readings, allows users to log in, and enables secure messaging with their doctor if needed. All patient data is also available through a connected web dashboard, providing healthcare professionals with convenient access to up-to-date patient information.</p>
+
+                        <p>This solution demonstrates an integrated approach to remote patient monitoring, combining hardware prototyping, advanced signal processing, machine learning, and full-stack application development to deliver accessible, user-friendly health tracking.</p>
                         <a href="#" class="btn">View Details</a>
                     </div>
                 </div>
@@ -827,13 +898,14 @@
                         <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lightweight Composite Material">
                     </div>
                     <div class="project-content">
-                        <h3>Lightweight Composite Material</h3>
+                        <h3>Grip Strength Monitor</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Materials Science</span>
-                            <span class="project-tag">Research</span>
-                            <span class="project-tag">Aerospace</span>
+                            <span class="project-tag">GripStrength</span>
+                            <span class="project-tag">PressureTransducer</span>
+                            <span class="project-tag">EmbeddedSystems</span>
                         </div>
-                        <p>Developed a novel composite material that is 30% lighter than aluminum while maintaining comparable strength properties.</p>
+                        <p>This project involves creating a wearable device that measures grip strength using a pressure transducer paired with a squeezable rubber bung. The device is worn around the bicep, allowing for convenient, real-time monitoring of grip force.</p>
+                        <p>Designed for use in physical therapy, athletic training, and rehabilitation, the system offers precise measurements to help track and improve muscle performance outside of clinical settings. By integrating sensor technology with custom electronics, this solution provides a practical and portable method for assessing muscular strength.</p>
                         <a href="#" class="btn">View Details</a>
                     </div>
                 </div>
@@ -849,47 +921,47 @@
                 <!-- Education -->
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <div class="timeline-date">2015 - 2019</div>
-                        <h3>Master of Science in Mechanical Engineering</h3>
-                        <p>Stanford University</p>
-                        <p>Specialized in Advanced Materials and Manufacturing. Thesis on "Novel Composite Materials for Aerospace Applications."</p>
+                        <div class="timeline-date">2022 - 2025</div>
+                        <h3>Bachelors of Science in Biomedical Engineering</h3>
+                        <p>Universiy of the West Indies</p>
+                        <p>I studied Biomedical Engineering at the University of the West Indies (UWI), where I gained a comprehensive foundation in both engineering principles and biological sciences. My coursework and projects spanned areas such as medical device design, signal processing, and embedded systems, allowing me to bridge hardware and software development in healthcare applications."</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <div class="timeline-date">2011 - 2015</div>
-                        <h3>Bachelor of Science in Mechanical Engineering</h3>
-                        <p>University of Michigan</p>
-                        <p>Graduated with honors. Minor in Sustainable Systems. Senior project on renewable energy systems.</p>
+                        <div class="timeline-date">2014 - 2021</div>
+                        <h3>Diploma</h3>
+                        <p>Charlemont High School</p>
+                        <p>Before university, I completed high school with a strong academic foundation, studying a total of 18 subjects with a focus on the sciences. This broad and rigorous preparation equipped me well for the interdisciplinary challenges of Biomedical Engineering at UWI.</p>
                     </div>
                 </div>
                 
                 <!-- Experience -->
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <div class="timeline-date">2020 - Present</div>
-                        <h3>Senior Design Engineer</h3>
-                        <p>Innovatech Solutions</p>
-                        <p>Lead product development team. Designed 12 new products that generated $8M in revenue. Managed cross-functional teams of 5-8 engineers.</p>
+                        <div class="timeline-date">June 2025 - Present</div>
+                        <h3>Mobile/WebApp Developer</h3>
+                        <p>Creative Caribbea</p>
+                        <p>Led the development of a digital platform empowering Caribbean creative practitioners to share work, network, find job opportunities, and sell their creations. Managed a team, drove idea generation, and conducted research to align the product with customer needs and market trends.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <div class="timeline-date">2019 - 2020</div>
-                        <h3>Mechanical Engineer</h3>
-                        <p>GreenTech Manufacturing</p>
-                        <p>Optimized production processes, reducing waste by 18%. Designed tooling and fixtures that improved assembly line efficiency by 22%.</p>
+                        <div class="timeline-date">Summer 2023</div>
+                        <h3>Engineering intern</h3>
+                        <p>RUSAL</p>
+                        <p>During my internship at Rusal, I supported mechanical, electrical, and chemical engineers by maintaining system operations and coordinating tasks for technicians. This experience gave me practical exposure to multidisciplinary engineering processes and strengthened my teamwork and problem-solving skills in an industrial setting.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <div class="timeline-date">Summer 2018</div>
-                        <h3>Engineering Intern</h3>
-                        <p>NASA Jet Propulsion Laboratory</p>
-                        <p>Worked on thermal protection systems for Mars rover. Conducted material testing and analysis.</p>
+                        <div class="timeline-date">June 2022 - October 2023</div>
+                        <h3>Full Stack Web Developer Assistant</h3>
+                        <p>University of the West Indies</p>
+                        <p>Assisted a university lecturer in developing responsive, client-focused websites by contributing to both front-end and back-end development. Gained hands-on experience in coding, testing, and deploying web applications while collaborating closely with the team to deliver effective digital solutions.</p>
                     </div>
                 </div>
             </div>
@@ -905,24 +977,24 @@
                     <div class="hobby-icon">
                         <i class="fas fa-hiking"></i>
                     </div>
-                    <h3>Hiking & Outdoor Adventures</h3>
-                    <p>I love exploring national parks and challenging myself with multi-day backpacking trips. The engineering principles in nature's designs are endlessly fascinating.</p>
+                    <h3>Exercising</h3>
+                    <p>I enjoy exercising regularly as a way to stay healthy, build discipline, and maintain mental clarity. Physical activity helps me recharge, improve focus, and bring energy and balance to both my personal and professional life.</p>
                 </div>
                 
                 <div class="hobby-card">
                     <div class="hobby-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>DIY Robotics</h3>
-                    <p>Building robots from scratch combines my love for mechanics, electronics, and programming. My current project is an autonomous gardening robot.</p>
+                    <h3>DIY Innovations</h3>
+                    <p>I enjoy writing code for apps and websites, developing AI models, and building electronic devices. This passion fuels my creativity and problem-solving skills, allowing me to explore new technologies and bring innovative ideas to life both professionally and personally.</p>
                 </div>
                 
                 <div class="hobby-card">
                     <div class="hobby-icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <h3>STEM Mentoring</h3>
-                    <p>Volunteering with local schools to teach engineering concepts through hands-on projects. Seeing students' "aha" moments is incredibly rewarding.</p>
+                    <h3>Hanging out with friends</h3>
+                    <p>I enjoy going out with friends and socializing, which helps me build meaningful relationships, relax, and gain new perspectives. Balancing work with quality time spent connecting with others keeps me energized and motivated.</p>
                 </div>
             </div>
         </div>
@@ -979,7 +1051,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+<!--     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-info">
@@ -1005,7 +1077,29 @@
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-info">
+            <p>I'm always interested in hearing about new engineering challenges or collaboration opportunities. Reach out directly:</p>
+            
+            <!-- Email Link -->
+            <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:ricardocsn01@gmail.com">ricardocsn01@gmail.com</a>
+            </div>
+            
+            <!-- Phone Link -->
+            <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <a href="tel:8764697042">(876) 469-7042</a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -1017,7 +1111,7 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Ricardo Harrison All rights reserved.</p>
         </div>
     </footer>
 
